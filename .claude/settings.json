@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv *)",
+      "Bash(python3 *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)"
+    ],
+    "deny": [
+      "Bash(git reset --hard *)",
+      "Bash(git checkout -- *)"
+    ]
+  },
+  "hooks": {
+    "preCommit": [
+      "uv --version"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "var-simulations"
+version = "0.1.0"
+description = "VaR simulation workflows for quantitative finance"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26.0",
+  "pandas>=2.2.0",
+  "polars>=1.0.0",
+  "pyarrow>=16.1.0",
+]
+
+[project.scripts]
+hist-var-pandas = "var_simulations.cli_pandas:main"
+hist-var-polars = "var_simulations.cli_polars:main"
+hist-var-benchmark = "var_simulations.benchmark:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -11,20 +11,26 @@ A collection of interactive demo applications for talks and presentations, built
 
 ## Requirements
 
-- Python 3.9+
-- Each subproject has its own `requirements.txt`. Install with:
-  ```bash
-  pip install -r <subproject>/requirements.txt
-  ```
+- Python 3.10+
+- UV package manager (`brew install uv`)
+- Follow setup steps in each subproject README
+
+## AI tooling
+
+- Central AI setup and precedence rules: [AI_INSTRUCTIONS.md](./AI_INSTRUCTIONS.md)
+- Copilot baseline instructions: [`.github/copilot-instructions.md`](./.github/copilot-instructions.md)
+- Claude baseline instructions: [`CLAUDE.md`](./CLAUDE.md)
 
 ## Running a demo
 
 ```bash
 # Financial quant demo
 cd financial_quant
-streamlit run app.py
+uv sync
+uv run streamlit run app.py
 
 # Digital assets demo
 cd digital_assets
-streamlit run app.py
+uv sync
+uv run streamlit run app.py
 ```

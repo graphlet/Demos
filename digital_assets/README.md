@@ -6,9 +6,18 @@ An interactive Streamlit application for digital-asset / crypto calculations:
 - **DeFi Yield Calculator** — compare APR vs APY and project earnings over time
 - **Tokenomics Modeller** — model token supply, emission schedule, and market-cap projections
 
+## Setup (UV)
+
+Use these commands every time:
+
+```bash
+brew install uv
+cd digital_assets
+uv sync
+```
+
 ## Run
 
 ```bash
-pip install -r requirements.txt
-streamlit run app.py
+uv run streamlit run app.py
 ```

@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/financial_quant/simulated_data_lab/.venv/bin/python",
+  "python.venvPath": "${workspaceFolder}/financial_quant/simulated_data_lab"
+}

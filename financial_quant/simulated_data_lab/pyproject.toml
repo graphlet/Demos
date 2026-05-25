@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simulated-data-lab"
+version = "0.1.0"
+description = "Config-driven synthetic dataset generator for quantitative finance projects"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26.0",
+  "pandas>=2.2.0",
+  "pyarrow>=16.1.0",
+  "pyyaml>=6.0.1",
+  "tqdm>=4.66.4",
+]
+
+[project.scripts]
+sim-quant-data = "simulated_data_lab.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,6 @@
+[tool.uv.workspace]
+members = [
+  "digital_assets",
+  "financial_quant",
+  "financial_quant/simulated_data_lab"
+]
